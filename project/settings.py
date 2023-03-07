@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
 import os
 from pathlib import Path
 
@@ -21,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jjk&idl=$a(3&g_fh&7p$frfk$jg1w0^pmz7mx1i-(((7e*!nw'
+SECRET_KEY = 'django-insecure-9z7ra+6e8syml9le_=3n-sk$q)i8048-dewa=9@x5t0+-6sdkf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+    'app'
 ]
 
 MIDDLEWARE = [
