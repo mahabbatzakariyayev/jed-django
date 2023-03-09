@@ -6,7 +6,7 @@ def index(request):
 def about(request,soz):
     
     context = {
-        "sozum":soz,
+        "sozum":soz ,
         "ad": str('salam')
     }
     return render(request,'about.html',context)

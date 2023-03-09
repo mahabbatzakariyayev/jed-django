@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +13,12 @@
 <body>
  
 {% include "header.html" %}
+{% block blokum %}{% endblock blokum %}
 
-{% block main %} {% endblock main %}
-
+{% block block2 %}{% endblock block2 %}
 {% block part3 %}{% endblock part3 %}
+
+
 
 </body>
 
