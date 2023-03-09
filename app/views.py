@@ -4,8 +4,9 @@ from django.shortcuts import render,HttpResponse
 def index(request):
     return render(request,'index.html')
 def about(request,soz):
-    soz1 = soz
+    
     context = {
-        "sozum":soz1
+        "sozum":soz,
+        "ad": str('salam')
     }
     return render(request,'about.html',context)
