@@ -9,7 +9,11 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+<<<<<<< HEAD
 
+=======
+import os
+>>>>>>> c1fdec9de26f8736248dab34077a2abf9ed19695
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,7 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-&$y_j4hxo6h%5_*2(+gjn34ch6+^dh41r#2cz)6(u2g6=@_j)q'
+=======
+SECRET_KEY = 'django-insecure-9z7ra+6e8syml9le_=3n-sk$q)i8048-dewa=9@x5t0+-6sdkf'
+>>>>>>> c1fdec9de26f8736248dab34077a2abf9ed19695
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'app',
+=======
+    'app'
+>>>>>>> c1fdec9de26f8736248dab34077a2abf9ed19695
 ]
 
 MIDDLEWARE = [
@@ -55,7 +67,11 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [],
+=======
+        'DIRS': [BASE_DIR/'templates'],
+>>>>>>> c1fdec9de26f8736248dab34077a2abf9ed19695
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,7 +120,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
+<<<<<<< HEAD
 LANGUAGE_CODE = 'az-az'
+=======
+LANGUAGE_CODE = 'en-us'
+>>>>>>> c1fdec9de26f8736248dab34077a2abf9ed19695
 
 TIME_ZONE = 'UTC'
 
@@ -118,6 +138,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+<<<<<<< HEAD
+=======
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
+
+>>>>>>> c1fdec9de26f8736248dab34077a2abf9ed19695
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
