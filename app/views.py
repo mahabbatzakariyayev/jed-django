@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 from django.shortcuts import render
 
 # Create your views here.
-=======
+
 from django.shortcuts import render,HttpResponse
 
 # Create your views here.
@@ -21,4 +21,4 @@ def jed(request):
         'meyve': 'banan',
     }
     return render(request,'index.html',context=c1,)
->>>>>>> c1fdec9de26f8736248dab34077a2abf9ed19695
+
