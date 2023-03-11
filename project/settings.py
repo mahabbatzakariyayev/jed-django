@@ -9,7 +9,10 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7daf196bb735e9a7398ba8be92db94ed8883cbc3
 import os
 from pathlib import Path
 
@@ -21,7 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-fh5v7bh9-$&(svf-wdn9vtc6#f*vzr&5fdu2fp^6drly5$i07%'
+=======
+SECRET_KEY = 'django-insecure-&$y_j4hxo6h%5_*2(+gjn34ch6+^dh41r#2cz)6(u2g6=@_j)q'
+
+>>>>>>> 7daf196bb735e9a7398ba8be92db94ed8883cbc3
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -119,11 +127,18 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7daf196bb735e9a7398ba8be92db94ed8883cbc3
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7daf196bb735e9a7398ba8be92db94ed8883cbc3
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
