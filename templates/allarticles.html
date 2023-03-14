@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% for article in articles %}
+<div class="col-sm-6 col-lg-4 mb-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{article.name}}</h5>
+        <p class="card-text">{{article.metn}}</p>
+        <p class="card-text"><small class="text-muted">{{article.create_date}} tarixinde yaradildi.</small></p>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endblock main %} 
