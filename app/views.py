@@ -1,4 +1,5 @@
 
+from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect, render
 
 from app.forms import ArticleForm
@@ -45,6 +46,7 @@ def createarticle(request):
 
     if form.is_valid():
         form.save()
+        messages.success(request,"Artikl ugurla yadda saxlanildi")
         return redirect('index')
     context = {
         'form': form
