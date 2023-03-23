@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 {% block main %}
-<form method="post">
+<form method="post"  style="width:380px;margin:auto">
     {% csrf_token %}
-    {{form.as_p}}
+  
+    {{form|crispy}}
     <button type="submit">Gonder</button>
 </form>
 
