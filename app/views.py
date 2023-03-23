@@ -52,3 +52,5 @@ def createarticle(request):
         'form': form
     }
     return render(request,"createarticle.html",context)
+
+# https://www.geeksforgeeks.org/django-modelform-create-form-from-models/
