@@ -1,13 +1,13 @@
 
-from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect, render
 
-from app.forms import ArticleForm
+
+from django.contrib import messages
 
 # Create your views here.
 from .models import Article
 from django.shortcuts import render,HttpResponse
-
+from .forms import ArticleForm
 # Create your views here.
 def index(request):
     return render(request,'index.html')
@@ -36,21 +36,21 @@ def showarticle(request,id):
 
 def allarticles(request):
     articles = Article.objects.all()
+    print(articles)
     contextim  = {
         'articles': articles
     }
     return render(template_name='allarticles.html',request=request,context=contextim)
 
 def createarticle(request):
-    form = ArticleForm(request.POST or None)
+    form = ArticleForm( request.POST or None ) 
 
     if form.is_valid():
         form.save()
-        messages.success(request,"Artikl ugurla yadda saxlanildi")
+        messages.success(request,"Artikl ugurla yaradıldı")
         return redirect('index')
-    context = {
-        'form': form
+    
+    context  = {
+        'form' : form
     }
-    return render(request,"createarticle.html",context)
-
-# https://www.geeksforgeeks.org/django-modelform-create-form-from-models/
+    return render(request,'createarticle.html',context)
