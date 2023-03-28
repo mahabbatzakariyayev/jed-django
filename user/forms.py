@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth.models  import User
 class RegisterForm(forms.Form):
 
 
@@ -20,6 +21,12 @@ class RegisterForm(forms.Form):
 
         }
         return values
-            
-        
+
+
+           
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=32,label='Username')
+    password = forms.CharField(max_length=64,label='Password',widget=forms.PasswordInput())
+
+
 
