@@ -41,14 +41,19 @@ def allarticles(request):
         'articles': articles
     }
     return render(template_name='allarticles.html',request=request,context=contextim)
-
+from django.contrib.auth.decorators import login_required
+@login_required(login_url='login')
 def createarticle(request):
     form = ArticleForm( request.POST or None, request.FILES or None ) 
 
     if form.is_valid():
-        form.author = request.user
+        name = form.cleaned_data.get('name')
+        metn = form.cleaned_data.get('metn')
+        sekil = form.cleaned_data.get("sekil")
+        newArticle = Article(name= name,sekil=sekil,metn=metn)
+        newArticle.author = request.user
+        newArticle.save()
         
-        form.save()
 
         messages.success(request,"Artikl ugurla yaradıldı")
         return redirect('index')

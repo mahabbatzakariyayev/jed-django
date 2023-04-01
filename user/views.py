@@ -4,7 +4,7 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 
 from django.contrib.auth.models import User
-from django.contrib.auth import login,authenticate
+from django.contrib.auth import login,authenticate,logout
 
 from .forms import LoginForm, RegisterForm
 # Create your views here.
@@ -19,6 +19,7 @@ def registerW(request):
             newUser = User(username= myusername)
             newUser.set_password(mypassword)
             newUser.save()
+            login(request,newUser)
             
             messages.success(request,"Istifadəçi uğurla yaradıldı")
             return redirect('index')
@@ -52,3 +53,7 @@ def loginW(request):
     
 
     return render(request,'login.html',context)
+
+def logoutW(request):
+    logout(request)
+    return redirect('index')
