@@ -43,10 +43,13 @@ def allarticles(request):
     return render(template_name='allarticles.html',request=request,context=contextim)
 
 def createarticle(request):
-    form = ArticleForm( request.POST or None ) 
+    form = ArticleForm( request.POST or None, request.FILES or None ) 
 
     if form.is_valid():
+        form.author = request.user
+        
         form.save()
+
         messages.success(request,"Artikl ugurla yaradıldı")
         return redirect('index')
     
